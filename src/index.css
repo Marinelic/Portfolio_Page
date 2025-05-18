@@ -106,6 +106,7 @@
     transition-duration: 300ms;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  
 }
 
 @layer utilities {
@@ -190,9 +191,9 @@
 
   .meteor {
     position: absolute;
+    background-image: linear-gradient(to right, white, rgb(1, 29, 46),  transparent);
     border-radius: 9999px;
-    background: linear-gradient(to right, #fff, #fff, transparent);
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+    animation: meteor 5s linear infinite;
   }
 }
 
@@ -201,4 +202,13 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+
+/* Hide meteors in light mode */
+:root .meteor {
+  display: none;
+}
+.dark .meteor {
+  display: block;
 }
