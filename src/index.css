@@ -142,7 +142,7 @@
 
   .text-glow {
     position: relative;
-    text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+    text-shadow: 0 0 10px rgba(15, 218, 184, 0.5);
   }
 
   .card-hover {
@@ -211,4 +211,8 @@
 }
 .dark .meteor {
   display: block;
+}
+
+a {
+  margin: 0;
 }
