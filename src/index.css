@@ -209,10 +209,11 @@
 :root .meteor {
   display: none;
 }
+
 .dark .meteor {
   display: block;
 }
 
-a {
-  margin: 0;
+#navbar {
+  margin: 30px;
 }
