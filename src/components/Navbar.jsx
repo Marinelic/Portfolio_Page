@@ -34,8 +34,8 @@ export const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center gap-2"
           href="#hero"
         >
-          <span className="text-yellow-400">Marinela Rajković</span>
-          <span className="text-foreground">Portfolio</span>
+          <span className="text-foreground">Marinela Rajković</span>
+          <span className="text-yellow-400">Portfolio</span>
         </a>
 
         {/* desktop nav */}
