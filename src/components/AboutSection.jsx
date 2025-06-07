@@ -1,5 +1,4 @@
-
-
+import { Briefcase, Code, User } from "lucide-react";
 
 
 export const AboutSection  = () => {
@@ -32,12 +31,57 @@ export const AboutSection  = () => {
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                             <a href="#contact" className="cosmic-button"> {" "} Get In Touch</a>
 
-                            <a href="#" className="px-6 py-2 rounded-full border border-cyan-700 transition-colors duration-300"> {" "} Get In Touch</a>
+                            <a href="#" className="px-6 py-2 rounded-full border border-cyan-700 transition-colors duration-300"> {" "} Download CV</a>
                         </div>
                     </div>
     
-                    <div>
-                       
+                    <div className="grid grid-cols-1 gap-6">
+                       <div className="gradient-border p-6 card-hover">
+                        <div className="flex items-start gap-4">
+                            <div className="p-3 rounded-full bg-cyan-600/10">
+                                <Code className="h-6 w-6 text-yellow-400" />
+                            </div>
+
+                            <div className="text-left">
+                                <h4 className="font-semibold text-lg">Web Development</h4>
+
+                                <p className="text-muted-foreground">Creating responsive websites and web applications with
+                                modern frameworks.</p>
+                            </div>
+                        </div>
+                       </div>
+
+
+                       <div className="gradient-border p-6 card-hover">
+                       <div className="flex items-start gap-4">
+                            <div className="p-3 rounded-full bg-cyan-600/10">
+                                <User className="h-6 w-6 text-yellow-400" />
+                            </div>
+
+                            <div className="text-left">
+                                <h4 className="font-semibold text-lg">UI/UX Design</h4>
+
+                                <p className="text-muted-foreground">Designing intuitive user interfaces and seamless user
+                                experiences.</p>
+                            </div>
+                        </div>
+                       </div>
+
+
+                       <div className="gradient-border p-6 card-hover">
+                       <div className="flex items-start gap-4">
+                            <div className="p-3 rounded-full bg-cyan-600/10">
+                                <Briefcase className="h-6 w-6 text-yellow-400" />
+                            </div>
+
+                            <div className="text-left">
+                                <h4 className="font-semibold text-lg">Project Management</h4>
+
+                                <p className="text-muted-foreground">Leading projects from conception to completion with agile
+                                methodologies..</p>
+                            </div>
+                        </div>
+                       </div>
                     </div>
                 </div>
             </div>
