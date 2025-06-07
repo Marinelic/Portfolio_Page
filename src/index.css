@@ -8,8 +8,8 @@
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  --color-primary: rgb(24, 147, 156);
-  --color-primary-foreground: rgb(24, 147, 156);
+  --color-primary: yellow;
+  --color-primary-foreground: yellow;
   --color-card: hsl(var(--card));
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -68,15 +68,18 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: yellow;
     --foreground: rgb(24, 147, 156);
 
     --card: 0 0% 100%;
 
-    --primary: rgb(24, 147, 156);
-    --primary-foreground: 210 40% 98%;
+    --primary: yellow;
+    --primary-foreground: yellow;
 
     --border: 214 32% 91%;
+
+    --loly: 15, 218, 184, 0.5;
+    
   }
 
   .dark {
@@ -85,10 +88,11 @@
 
     --card: 222 47% 8%;
 
-    --primary: rgb(24, 147, 156);
-    --primary-foreground: 213 31% 91%;
+    --primary: yellow;
+    --primary-foreground: yellow;
 
     --border: 217 33% 20%;
+   
   }
 
   * {
@@ -169,7 +173,7 @@
     padding-bottom: 0.5rem;
     border-radius: 9999px; /* rounded-full */
     background-color: rgb(24, 147, 156);
-    color: hsl(var(--primary-foreground));
+    color: white;
     font-weight: 500; /* font-medium */
     transition-property: all;
     transition-duration: 300ms;
