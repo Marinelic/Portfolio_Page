@@ -8,12 +8,32 @@ import {
     Send,
     Twitch,
     Twitter,
-  } from "lucide-react";
- /*  import { cn } from "@/lib/utils";
-  import { useToast } from "@/hooks/use-toast";
-  import { useState } from "react"; */
+  }  from "lucide-react";
+    import { cn } from "@/lib/utils";
+    import { useToast } from "@/hooks/use-toast";
+    import { useState } from "react";
 
 export const ContactSection  = () => {
+
+    const { toast } = useToast();
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setIsSubmitting(true);
+
+        setTimeout(() => {
+            toast({
+                title: "Message Sent",
+                description: "Thank you for reaching out! I'll get back to you soon.",
+            })
+
+            setIsSubmitting(false);
+
+        }, 1500);
+    }
 
     return (
         <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -28,7 +48,7 @@ export const ContactSection  = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="space-y-8">
+                    <div className="space-y-8 mx-auto">
                         <h3 className="text-2xl  font-semibold mb-6">
                             Contact Information
                         </h3>
@@ -97,10 +117,12 @@ export const ContactSection  = () => {
                     </div>
 
 
-                    <div>
-                        <h3>Send a Message</h3>
+                    <div className="bg-amber-400/10 p-8 rounded-lg shadow-xs"
+                         onSubmit={handleSubmit} >
 
-                        <form>
+                        <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+
+                        <form className="space-y-6">
                             <div>
                                 <label 
                                        htmlFor="name"
@@ -150,6 +172,14 @@ export const ContactSection  = () => {
                                        className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-amber-400/40 resize-none"
                                        placeholder="Hello, I'd like to talk about..." />
                             </div>
+
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
+                                    {isSubmitting ? "Sending..." : "Send Message"}
+                                <Send size={16}/>
+                            </button>
 
                         </form>
                     </div>
